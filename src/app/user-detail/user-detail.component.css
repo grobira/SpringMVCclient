@@ -15,6 +15,15 @@ form {
 
 
 #btn-back{
-	position: absolute;
 	left: 485px;
+	width: 100px;
+}
+
+.mat-raised-button{
+	width: 100px;
+}
+
+.buttons{
+	position: absolute;
+	bottom: 30px;
 }

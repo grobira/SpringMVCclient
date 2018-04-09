@@ -7,10 +7,15 @@
 }
 
 .mat-card-content{
-	min-width: 150px;
+	min-width: 200px;
   	max-width: 500px;
   	width: 100%;
 	display: inline-block;
+}
+
+.mat-nav-list{
+	height: 250px;
+	overflow-y: scroll;
 }
 
 .mat-raised-button{
@@ -23,4 +28,20 @@
 form{
 	height: 20px;
 	font-size: 10;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #A0A0A0; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666; 
 }

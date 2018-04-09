@@ -15,6 +15,10 @@ form {
 
 
 #btn-back{
-	position: absolute;
 	left: 485px;
+}
+
+.buttons{
+	position: absolute;
+	bottom: 30px;
 }
