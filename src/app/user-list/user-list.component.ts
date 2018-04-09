@@ -1,4 +1,4 @@
-import { UserListService } from './user-list.service';
+import { UserService } from '../user/user.service';
 import { Component } from '@angular/core';
 
 
@@ -11,11 +11,22 @@ import { Component } from '@angular/core';
 export class UserListComponent{
 	users: Array<any>;
 
-	constructor(private userListService: UserListService){ }
+	constructor(private userService: UserService){ }
 
 	ngOnInit(){
-		this.userListService.getAll().subscribe(data=> {
-			this.users = data;
-		});
+		this.userService.getAll()
+			.subscribe(data=> {
+				this.users = data;
+			});
+	}
+
+
+	filterByAge(value: string) : void {
+		if(value != ""){
+			this.userService.filterByAge(value)
+				.subscribe(data=>
+					this.users = data;
+				});
+		}
 	}
 }

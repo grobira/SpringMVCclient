@@ -35,4 +35,13 @@ export class UserService {
   	paramsAtt = paramsAtt.append('id', id);
   	return this.http.delete('//localhost:8080/users/delete', {params: paramsAtt});
   }
+
+  getAll() : Observable<any>{
+    return this.http.get('//localhost:8080/users');
+  }
+
+  filterByAge(age : string) : Observable<any>{
+    let paramsAtt = new HttpParams().set('age', age);
+    return this.http.get('//localhost:8080/users/filterByAge', {params: paramsAtt});
+  }
 }

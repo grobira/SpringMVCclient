@@ -22,11 +22,11 @@ export class UserDetailComponent{
   }
 
   getUser() : void{
-  	const id = +this.route.snapshot.paramMap.get('id');
-  	this.userService.getUser(id.toString())
-  		.subscribe(user =>{
-  			this.user = user;
-  		});
+    const id = +this.route.snapshot.paramMap.get('id');
+    	this.userService.getUser(id.toString())
+    		.subscribe(user =>{
+    			this.user = user;
+    });
   }
 
   onClickUpdate(name: string, lastName: string, age: string){

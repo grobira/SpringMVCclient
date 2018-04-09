@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { UserListService } from './user-list/user-list.service';
 import { UserService } from './user/user.service'; 
 import { UserComponent, NoNameDialog } from './user/user.component'; 
 import { HttpClientModule } from '@angular/common/http';
@@ -50,7 +49,7 @@ const appRoutes: Routes = [
     MatProgressBarModule
   ],
   entryComponents: [NoNameDialog],
-  providers: [UserListService, UserService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
