@@ -1,0 +1,18 @@
+<mat-card-header><b>User</b></mat-card-header>
+<form class="example-form">
+	<mat-form-field>
+		<input matInput #name placeholder="name" value={{user?.name}}>
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput #lastName placeholder="lastName" value={{user?.lastName}}>
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput #age placeholder="age" value={{user?.age}}>
+	</mat-form-field>
+</form>
+
+
+<a mat-raised-button (click)="onClickUpdate(name.value, lastName.value, age.value)">Add</a>
+<a mat-raised-button (click)="onClickDelete()">Delete</a>
+
+<a id="btn-back" mat-raised-button (click)="onClickBack()">Back</a>

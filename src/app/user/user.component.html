@@ -1,0 +1,19 @@
+
+<mat-card-header><b>New User</b></mat-card-header>
+<form class="example-form">
+	<mat-form-field>
+		<input matInput #name placeholder="name">
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput #lastName placeholder="lastName">
+	</mat-form-field>
+	<mat-form-field>
+		<input matInput #age placeholder="age">
+	</mat-form-field>
+</form>
+
+<a mat-raised-button (click)="onClickSave(name.value, lastName.value, age.value)">Add</a>
+
+<a id="btn-back" mat-raised-button (click)="onClickBack()">Back</a>
+
+

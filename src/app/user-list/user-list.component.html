@@ -1,0 +1,10 @@
+
+  <mat-card-header><b>User List</b></mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let user of users" href="/user/{{user.id}}">
+        <h3 mat-line>{{user.name}} {{user.lastName}}</h3>
+      </a>
+    </mat-nav-list>
+  </mat-card-content>
+  <a mat-raised-button href="/new">New User!</a>
