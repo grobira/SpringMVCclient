@@ -25,8 +25,8 @@ export class UserListComponent{
 		if(value != ""){
 			this.userService.filterByAge(value)
 				.subscribe(data=>
-					this.users = data;
-				});
+					this.users = data
+				);
 		}
 	}
 }
